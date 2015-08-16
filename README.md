@@ -8,5 +8,8 @@ React Modal for Semantic UI
 - React
 - Semantic UI
 
+##### Install:
+    npm install --save react-semantic-modal
+
 ##### Usage:
 > Please see `build/index.html` for example. Include Semantic UI css and javascript, and jQuery.
