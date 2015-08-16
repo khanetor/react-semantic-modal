@@ -1,6 +1,6 @@
 {
   "name": "react-semantic-modal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React component for semantic UI modal",
   "main": "src/components/modal.jsx",
   "scripts": {
