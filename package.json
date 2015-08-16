@@ -1,6 +1,6 @@
 {
   "name": "react-semantic-modal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React component for semantic UI modal",
   "main": "src/components/modal.jsx",
   "scripts": {
@@ -16,7 +16,8 @@
     "react",
     "webpack",
     "semantic-ui",
-    "modal"
+    "modal",
+    "react-portal"
   ],
   "author": "Kha Nguyen <nlhkha@gmail.com>",
   "license": "MIT",
@@ -28,7 +29,6 @@
     "webpack-dev-server": "^1.10.1"
   },
   "dependencies": {
-    "jquery": "^2.1.4",
     "react": "^0.13.3",
     "react-portal": "^0.7.0"
   }
