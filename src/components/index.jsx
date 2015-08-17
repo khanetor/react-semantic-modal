@@ -1,10 +1,15 @@
+'use strict';
+
 import React, { Component } from 'react';
 import Modal from './modal';
+
+let foo = () => window.alert(123);
 
 class ModalDemo extends Component {
   render() {
     return (
-      <Modal style='basic' size='fullscreen' trigger={<button className='ui button blue'>Click me</button>}>
+      <Modal style='standard' size='fullscreen' isOpened={true} onClose={foo}>
+      {/*<Modal style='standard' size='fullscreen' trigger={<button className='ui button blue'>Click me</button>}>*/}
         <div className='header'>
           Profile Picture
         </div>
