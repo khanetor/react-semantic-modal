@@ -14,9 +14,15 @@ class InnerModal extends Component {
 
   render() {
     let className = `ui modal transition visible active ${this.props.style} ${this.props.size}`;
+
+    let closeIcon = null;
+    if (this.props.closeIcon) {
+      closeIcon =  <i className='close icon' onClick={this.props.closePortal}></i>;
+    }
+
     return (
       <div id='reactInnerModal' className={className} style={{'margin-top': - this.state.modalHeight / 2}}>
-        <i className='close icon' onClick={this.props.closePortal}></i>
+        {closeIcon}
         {this.props.children}
       </div>
     );
@@ -24,9 +30,9 @@ class InnerModal extends Component {
 }
 
 InnerModal.propTypes = {
-  children: PropTypes.element.isRequired,
   style: PropTypes.oneOf(['standard', 'basic']),
-  size: PropTypes.oneOf(['', 'small', 'large', 'fullscreen'])
+  size: PropTypes.oneOf(['', 'small', 'large', 'fullscreen']),
+  closeIcon: PropTypes.bool
 };
 InnerModal.defaultProps = {
   style: 'standard',
@@ -35,14 +41,14 @@ InnerModal.defaultProps = {
 
 class Modal extends Component {
   render() {
+    let className = `ui dimmer modals visible active page transition ${this.props.className}`;
     return (
-      <Portal className='ui dimmer modals visible active page transition'
-      openByClickOn={this.props.trigger}
+      <Portal className={className}
       isOpened={this.props.isOpened}
       closeOnEsc={this.props.closeOnEsc}
       closeOnOutsideClick={this.props.closeOnOutsideClick}
       onClose={this.props.onClose}>
-        <InnerModal style={this.props.style} size={this.props.size}>
+        <InnerModal style={this.props.style} size={this.props.size} closeIcon = {this.props.closeIcon}>
           {this.props.children}
         </InnerModal>
       </Portal>
@@ -51,20 +57,15 @@ class Modal extends Component {
 }
 
 Modal.propTypes = {
-  trigger: PropTypes.element,
-  isOpened: PropTypes.bool,
+  isOpened: PropTypes.bool.isRequired,
   closeOnEsc: PropTypes.bool,
   closeOnOutsideClick: PropTypes.bool,
   onClose: PropTypes.func,
-  children: PropTypes.element.isRequired,
+  closeIcon: PropTypes.bool,
   style: PropTypes.oneOf(['standard', 'basic']),
   size: PropTypes.oneOf(['', 'small', 'large', 'fullscreen'])
 };
 Modal.defaultProps = {
-  // trigger: <button className='ui button'>Open Modal</button>,
-  // isOpened: false,
-  closeOnEsc: true,
-  closeOnOutsideClick: true,
   style: 'standard',
   size: ''
 };

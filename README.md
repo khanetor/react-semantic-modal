@@ -23,18 +23,15 @@ React Modal for Semantic UI
 > Please see `build/index.html` and `src/components/index.jsx` for example. Include Semantic UI css and javascript, and jQuery.
 
     Modal.propTypes = {
-      trigger: PropTypes.element,
       isOpened: PropTypes.bool,
       closeOnEsc: PropTypes.bool,
       closeOnOutsideClick: PropTypes.bool,
       onClose: PropTypes.func,
-      children: PropTypes.element.isRequired,
+      closeIcon: PropTypes.bool,
       style: PropTypes.oneOf(['standard', 'basic']),
       size: PropTypes.oneOf(['', 'small', 'large', 'fullscreen'])
     };
     Modal.defaultProps = {
-      closeOnEsc: true,
-      closeOnOutsideClick: true,
       style: 'standard',
       size: ''
     };
