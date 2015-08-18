@@ -20,11 +20,10 @@ class ModalDemo extends Component {
   }
 
   render() {
-    console.log(this.state.isOpened);
     return (
       <div>
         <button className='ui button blue' onClick={this.open.bind(this)}>Click me</button>
-        <Modal style='standard' size='fullscreen' isOpened={this.state.isOpened} closeIcon closeOnOutsideClick>
+        <Modal style='standard' size='fullscreen' isOpened={this.state.isOpened} closeIcon closeOnOutsideClick onClose={this.close.bind(this)}>
           <div className='header'>
             Profile Picture
           </div>
