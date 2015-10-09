@@ -1,5 +1,10 @@
-import React, { Component, PropTypes } from 'react';
-import Portal from 'react-portal';
+'use strict';
+
+const React = require('react');
+const Component = React.Component;
+const PropTypes = React.PropTypes;
+
+const Portal = require('react-portal');
 
 class InnerModal extends Component {
   constructor(props) {
@@ -70,4 +75,4 @@ Modal.defaultProps = {
   size: ''
 };
 
-export default Modal;
+module.exports = Modal;
