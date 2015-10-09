@@ -1,12 +1,13 @@
 {
   "name": "react-semantic-modal",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React component for semantic UI modal",
-  "main": "src/components/modal.jsx",
+  "main": "build/modal.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --hot --process --colors --content-base build",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "install": "webpack -p"
   },
   "repository": {
     "type": "git",
