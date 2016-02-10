@@ -1,6 +1,8 @@
 React Modal for Semantic UI
 ===========================
 
+> Depreciation: This is no longer maintained. Please take a look at the [modal from Rackt](https://github.com/rackt/react-modal), which provides a minimal modal that you can customize depending on your CSS framework.
+
 ##### Dependencies:
 - Webpack
 - Webpack dev server
